@@ -1,10 +1,10 @@
-<%= from_for articles_path do %>
-<label>Article title:</label>
-<%= text_field_tag :title %><br> 
+<%= from_for @article do |f| %>
+<%=f.label 'Article title'%><br>
+<%= f.text_field_tag :title %><br> 
 
-<label>Article Description</label><br> 
+<%= f.label 'Article Description' %><br> 
 
-<%= text_area_tag :description %><br> 
+<%= f.text_area :description %><br> 
 
-<%= submit_tag "Submit Article" %> 
+<%= f.submit "Submit Article" %> 
 <% end %> 
